@@ -66,10 +66,12 @@
     {
        Schema::defaultStringLength(191);
     }
+    
 #### 6.新建目录
- ✗ mkdir -p storage/framework/views
- ✗ mkdir -p storage/framework/cache
- ✗ mkdir -p storage/framework/sessions
+- mkdir -p storage/framework/views
+- mkdir -p storage/framework/cache
+- mkdir -p storage/framework/sessions
+
 #### 7.访问首页
 访问自己的配置好的域名/admin  
 用户名：admin  
