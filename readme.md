@@ -24,8 +24,9 @@
   	- [3.生成APP_KEY](#3生成APP_KEY)
   	- [4.修改`env`配置](#4修改-env-配置)
   	- [5.数据库迁移](#5数据库迁移)
-  	- [6.访问首页](#6访问首页)
-  	- [7.数据外挂](#7数据外挂)
+   - [6.新建目录](#6新建目录)
+  	- [7.访问首页](#7访问首页)
+  	- [8.数据外挂](#8数据外挂)
   * [环境配置](#环境配置仅供参考)
   	- [1.windows](#1windows)
   	- [2.linux(apache)](#2linuxapache)
@@ -42,7 +43,7 @@
     composer install  
 #### 3.生成APP_KEY
     cp .env.example .env
-    php artisan key:generate  
+    php artisan key:generate
 #### 4.修改 `.env` 配置
     DB_CONNECTION=mysql
     DB_HOST=your_host
@@ -65,12 +66,16 @@
     {
        Schema::defaultStringLength(191);
     }
-#### 6.访问首页
+#### 6.新建目录
+ ✗ mkdir -p storage/framework/views
+ ✗ mkdir -p storage/framework/cache
+ ✗ mkdir -p storage/framework/sessions
+#### 7.访问首页
 访问自己的配置好的域名/admin  
 用户名：admin  
 密码：f123456
 
-### 7.数据外挂
+### 8.数据外挂
 - 外挂到/uploads
 - 建立软链接：ln -s /uploads   /data/wwwroot/XXXX/storage/app/public
 - php artisan storage:link 
